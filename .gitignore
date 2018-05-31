@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+*.iml
+target/
+logs/
+hibernate-example.iml
+#git check-ignore -v App.class 检查语法是否正确

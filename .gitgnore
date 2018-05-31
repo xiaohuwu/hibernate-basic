@@ -1,6 +1,0 @@
-.idea/
-.DS_Store
-*.iml
-target/
-logs/
-hibernate-example.iml

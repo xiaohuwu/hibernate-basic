@@ -27,8 +27,9 @@
         <property name="hbm2ddl.auto">update</property>
        <!-- <mapping class="com.ktb.model.User" />
         <mapping class="com.ktb.model.Student" />-->
-        <mapping resource="Customer.hbm.xml" />
-        <mapping resource="Order.hbm.xml" />
+        <mapping resource="mapper/Customer.hbm.xml" />
+        <mapping resource="mapper/Order.hbm.xml" />
+        <mapping resource="mapper/News.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>
