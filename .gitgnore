@@ -3,3 +3,4 @@
 *.iml
 target/
 logs/
+hibernate-example.iml
