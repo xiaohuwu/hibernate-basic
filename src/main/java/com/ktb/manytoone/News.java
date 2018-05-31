@@ -1,4 +1,4 @@
-package com.ktb.domain;
+package com.ktb.manytoone;
 
 import java.sql.Blob;
 import java.util.Date;

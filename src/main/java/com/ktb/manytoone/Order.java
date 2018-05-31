@@ -1,4 +1,4 @@
-package com.ktb.domain;
+package com.ktb.manytoone;
 
 public class Order {
 

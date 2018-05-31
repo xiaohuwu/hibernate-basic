@@ -1,6 +1,6 @@
 package com.ktb;
-
-import com.ktb.domain.News;
+import com.ktb.one2oneforeign.Department;
+import com.ktb.one2oneforeign.Manager;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -8,8 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.Date;
-public class SimpleTest {
+public class OneToOneTest {
     Session session;
     Transaction transaction;
     SessionFactory sessionFactory;
@@ -30,17 +29,39 @@ public class SimpleTest {
         sessionFactory.close();
     }
 
-    @Test
-    public void saveNews() {
+    /**
+     * ont to one 主键约束
+     */
+   /* @Test
+    public void save() {
 
-        News news = new News("Java12345", "ATGUIGU", new Date(new java.util.Date().getTime()));
-        session.save(news);
+        Manager manager = new Manager("助长");
+        session.save(manager);
+
+        Department department =new Department("销售部");
+        department.setMgr(manager);
+        session.save(department);
     }
 
+
     @Test
-    public void getNews() {
-        News news = session.get(News.class, 1);
-        System.out.println(news.toString());
+    public void get() {
+       Manager manager =  session.get(Manager.class,2);
+       System.out.println(manager.getDept().toString());
+    }*/
+
+
+    @Test
+    public void save() {
+
+        Manager manager = new Manager("助长");
+        session.save(manager);
+
+        Department department =new Department("销售部");
+        department.setMgr(manager);
+        session.save(department);
+
     }
+
 
 }

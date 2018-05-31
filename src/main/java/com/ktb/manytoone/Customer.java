@@ -1,4 +1,4 @@
-package com.ktb.domain;
+package com.ktb.manytoone;
 
 import java.util.HashSet;
 import java.util.Set;

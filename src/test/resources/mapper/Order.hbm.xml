@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.ktb.domain">
+<hibernate-mapping package="com.ktb.manytoone">
     <class name="Order" table="t_order">
         <id name="id" column="c_id">
             <generator class="identity" />
@@ -16,7 +16,7 @@
         column: 一那一端在多的一端对应的数据表中的外键的名字
     -->
 
-        <many-to-one name="customer" class="com.ktb.domain.Customer" column="c_customer_id">
+        <many-to-one name="customer" class="com.ktb.manytoone.Customer" column="c_customer_id">
         </many-to-one>
     </class>
 </hibernate-mapping>

@@ -2,8 +2,8 @@ package com.ktb;
 
 import static org.junit.Assert.assertTrue;
 
-import com.ktb.domain.Customer;
-import com.ktb.domain.Order;
+import com.ktb.manytoone.Customer;
+import com.ktb.manytoone.Order;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 import org.junit.After;

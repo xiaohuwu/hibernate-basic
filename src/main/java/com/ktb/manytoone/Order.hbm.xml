@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping package="com.ktb.domain">
+<hibernate-mapping package="com.ktb.manytoone">
     <class name="Order" table="t_order">
         <id name="id" column="c_id">
             <generator class="identity" />
         </id>
         <property name="money" column="c_money" />
         <property name="receiverInfo" column="c_receiverInfo" length="50" />
-        <many-to-one name="customer" class="com.ktb.domain.Customer"  cascade="save-update" column="c_customer_id">
+        <many-to-one name="customer" class="com.ktb.manytoone.Customer" cascade="save-update" column="c_customer_id">
         </many-to-one>
     </class>
 </hibernate-mapping>

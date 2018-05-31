@@ -30,6 +30,11 @@
         <mapping resource="mapper/Customer.hbm.xml" />
         <mapping resource="mapper/Order.hbm.xml" />
         <mapping resource="mapper/News.hbm.xml" />
+        <mapping resource="mapper/Department.hbm.xml" />
+        <mapping resource="mapper/Manager.hbm.xml" />
+
+        <mapping resource="mapper/oneforeign/Manager.hbm.xml" />
+        <mapping resource="mapper/oneforeign/Department.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>
