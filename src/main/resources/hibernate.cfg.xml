@@ -8,7 +8,7 @@
     <session-factory>
         <!-- 数据库连接配置 -->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/test1</property>
         <property name="connection.username">root</property>
         <property name="connection.password">123456</property>
         <!-- 数据库连接池的大小 -->
@@ -26,6 +26,8 @@
         <!-- 在启动时根据配置更新数据库 -->
         <property name="hbm2ddl.auto">update</property>
 
+        <mapping resource="com/ktb/query/Department.hbm.xml" />
+        <mapping resource="com/ktb/query/Employee.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>
