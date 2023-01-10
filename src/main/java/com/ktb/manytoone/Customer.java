@@ -1,20 +1,27 @@
 package com.ktb.manytoone;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+@Entity
+@Table(name="customer")
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String address;
 
-    private Set orders = new HashSet();
+
+    @OneToMany(mappedBy = "customer")
+    private Set<Order> orders = new HashSet();
 
 
     public Set getOrders() {
         return orders;
     }
+
 
     public void setOrders(Set orders) {
         this.orders = orders;

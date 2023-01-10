@@ -1,12 +1,20 @@
 package com.ktb.manytoone;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="orders")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Double money;
     private String receiverInfo; // 收货地址
 
     // 订单与客户关联
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
     private Customer customer; // 描述订单属于某一个客户
 
     public Customer getCustomer() {

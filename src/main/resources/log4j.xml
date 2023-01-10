@@ -31,9 +31,13 @@
         <level value="info" />
     </logger>
 
-    <logger name="log4j.logger.org.hibernate.SQL">
-        <level value="debug" />
-    </logger>
+<!--    <logger name="log4j.logger.org.hibernate.SQL">-->
+<!--        <level value="debug" />-->
+<!--    </logger>-->
+
+<!--    <logger name="log4j.logger.org.hibernate.SQL">-->
+<!--        <level value="info" />-->
+<!--    </logger>-->
 
     <logger name="log4j.logger.org.hibernate.type">
         <level value="trace" />
@@ -41,7 +45,7 @@
 
     <!-- Root Logger -->
     <root>
-        <priority value="info" />
+        <priority value="debug" />
         <appender-ref ref="console" />
     </root>
 
